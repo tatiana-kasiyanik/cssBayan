@@ -1,0 +1,71 @@
+html {
+   scroll-behavior: smooth;
+   font-size: 62.5%;
+}
+
+body {
+   width: 100%;
+   min-width: 32rem;
+   min-height: 56.8rem;
+   margin: 0;
+   background-color:#F3EAE0;
+   color: #837A71;
+   font-family: 'Arial', sans-serif;
+}
+
+h1 {
+   text-align: center;
+}
+
+.container {
+   width: 80%;
+   margin: 1rem auto 4rem auto;
+}
+
+.container label {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.5rem 2rem;
+   height: 3rem;
+   line-height: 2rem;
+   font-size: 1.1rem;
+   cursor: pointer;
+   border-top: 0.1rem solid #837A71;
+}
+
+.container label:hover {
+   color: #80B484;
+}
+
+.container input:checked + label,
+.container input:checked + label:hover {
+   color: #80B484;
+}
+
+.container input {
+   display: none;
+}
+
+.container img {
+   margin-top: -0.1rem;
+   overflow: hidden;
+   height: 0;
+   transition: height 0.5s ease-in-out;
+}
+
+.container input:checked ~ img {
+   transition: height 0.5s ease-in-out;
+   height: 15rem;
+}
+
+.icon {
+   background: url(assets/svg/cross.svg);
+   display: none;
+   width: 1.5rem;
+   height: 1.5rem;
+}
+
+.icon:hover {
+   display: block;
+}
