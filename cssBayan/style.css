@@ -19,6 +19,8 @@ h1 {
 .container {
    width: 80%;
    margin: 1rem auto 4rem auto;
+   cursor: pointer;
+   transition: 1s;
 }
 
 .container label {
@@ -33,12 +35,7 @@ h1 {
    border-top: 0.1rem solid #837A71;
 }
 
-.container label:hover {
-   color: #80B484;
-}
-
-.container input:checked + label,
-.container input:checked + label:hover {
+.container input:checked + label {
    color: #80B484;
 }
 
@@ -51,11 +48,11 @@ h1 {
    margin-left: 25%;
    overflow: hidden;
    height: 0;
-   transition: height 0.5s ease-in-out;
+   transition: height 1s ease-in-out;
 }
 
 .container input:checked ~ img {
-   transition: height 0.5s ease-in-out;
+   transition: height 1s ease-in-out;
    height: auto;
 }
 
@@ -66,8 +63,23 @@ h1 {
    height: 1.5rem;
 }
 
-.icon:hover {
-   display: block;
+@media (hover:hover) {
+   .container label:hover {
+      color: #80B484;
+   }
+
+   .container input:hover ~ img {
+      transition: height 1s ease-in-out;
+      height: auto;
+   }
+
+   .container input:checked + label:hover {
+      color: #80B484;
+   }
+
+   .icon:hover {
+      display: block;
+   }
 }
 
 @media (max-width: 1920px) {
