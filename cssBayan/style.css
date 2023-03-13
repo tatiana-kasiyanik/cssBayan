@@ -1,0 +1,134 @@
+html {
+   scroll-behavior: smooth;
+   font-size: 62.5%;
+}
+
+body {
+   width: 100%;
+   margin: 0;
+   background-color:#F3EAE0;
+   color: #837A71;
+   font-family: 'Arial', sans-serif;
+}
+
+h1 {
+   text-align: center;
+   font-size: 2rem;
+}
+
+.container * {
+   cursor: pointer;
+}
+
+.container {
+   width: 80%;
+   margin: 1rem auto 4rem auto;
+}
+
+label {
+   display: block;
+}
+
+label:active {
+   opacity: 0.5;
+   transition: opacity 0.8s;
+}
+
+.container label p {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0;
+   padding: 0 1rem;
+   height: 3rem;
+   line-height: 2rem;
+   font-size: 1.1rem;
+   border-top: 0.1rem solid #837A71;
+   transition: 0.6s;
+}
+
+.container input {
+   display: none;
+}
+
+.container input:checked + label p {
+   color: #80B484;
+}
+
+.container input:checked + label .fa-solid {
+   transform: rotate(45deg);
+}
+
+.container img {
+   overflow: hidden;
+   width: 0;
+   margin-left: 25%;
+   transition: width 1s ease-in-out;
+}
+
+.container input:checked ~ label img {
+   transition: width 1s ease-in-out;
+   width: 50%;
+   margin-left: 25%;
+}
+
+.fa-solid {
+   opacity: 0;
+   transition: opacity 0.8s;
+}
+
+@media (hover:hover) {
+   .container:hover .fa-solid {
+      opacity: 1;
+   }
+
+   .container label:hover {
+      color: #80B484;
+   }
+
+   .container label:hover .fa-solid {
+      transform: rotate(45deg);
+   }
+
+   .container div:hover img {
+      transition: width 1s ease-in-out;
+      width: 50%;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+   h1 {
+      font-size: 3rem;
+   }
+
+   .container label p {
+      padding: 1rem 5rem;
+      height: 4rem;
+      font-size: 1.8rem;
+   }
+}
+
+@media (min-width: 1281px) {
+   h1 {
+      font-size: 5rem;
+   }
+
+   .container label p {
+      padding: 1rem 10rem;
+      height: 4rem;
+      font-size: 3rem;
+   }
+
+   .container input:checked ~ label img {
+      width: 20%;
+      margin-left: 40%;
+   }
+
+   .container img {
+      margin-left: 40%;
+   }
+
+   .container div:hover img {
+      width: 20%;
+   }
+}
