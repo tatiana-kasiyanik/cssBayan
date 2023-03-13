@@ -44,16 +44,16 @@ h1 {
 }
 
 .container img {
-   width: 50%;
-   margin-left: 25%;
    overflow: hidden;
-   height: 0;
-   transition: height 1s ease-in-out;
+   width: 0;
+   margin-left: 25%;
+   transition: width 0.5s ease-in-out;
 }
 
 .container input:checked ~ img {
-   transition: height 1s ease-in-out;
-   height: auto;
+   transition: width 0.5s ease-in-out;
+   width: 50%;
+   margin-left: 25%;
 }
 
 .icon {
@@ -69,8 +69,8 @@ h1 {
    }
 
    .container input:hover ~ img {
-      transition: height 1s ease-in-out;
-      height: auto;
+      transition: width 0.5s ease-in-out;
+      width: 50%;
    }
 
    .container input:checked + label:hover {
@@ -92,9 +92,19 @@ h1 {
       font-size: 3rem;
    }
 
-   .container img {
+   .container input:checked ~ img {
+      transition: width 0.5s ease-in-out;
       width: 20%;
       margin-left: 40%;
+   }
+
+   .container img {
+      margin-left: 40%;
+   }
+
+   .container input:hover ~ img {
+      transition: width 0.5s ease-in-out;
+      width: 20%;
    }
 }
 
@@ -108,9 +118,19 @@ h1 {
       font-size: 1.8rem;
    }
 
-   .container img {
+   .container input:checked ~ img {
+      transition: width 0.5s ease-in-out;
       width: 50%;
       margin-left: 25%;
+   }
+
+   .container img {
+      margin-left: 25%;
+   }
+
+   .container input:hover ~ img {
+      transition: width 0.5s ease-in-out;
+      width: 50%;
    }
 }
 
@@ -124,8 +144,13 @@ h1 {
       font-size: 1.1rem;
    }
 
-   .container img {
+   .container input:checked ~ img {
+      transition: width 0.5s ease-in-out;
       width: 50%;
+      margin-left: 25%;
+   }
+
+   .container img {
       margin-left: 25%;
    }
 }
